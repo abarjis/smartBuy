@@ -3,19 +3,19 @@ const mongoose = require('mongoose')
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'Product name required'],
+        required: [true, 'Please enter product name'],
         trim: true,
-        maxLength: [100, 'Max length is 100 char.']
-    },
-    description: {
-        type: String,
-        required: [true, 'Product description required'],
+        maxLength: [100, 'Product name cannot exceed 100 characters']
     },
     price: {
         type: Number,
-        required: [true, 'Product price requird'],
-        maxLength: [5, 'Max length 5 char'],
+        required: [true, 'Please enter product price'],
+        maxLength: [5, 'Product name cannot exceed 5 characters'],
         default: 0.0
+    },
+    description: {
+        type: String,
+        required: [true, 'Please enter product description'],
     },
     ratings: {
         type: Number,
@@ -35,22 +35,33 @@ const productSchema = new mongoose.Schema({
     ],
     category: {
         type: String,
-        required: [true, 'Product category required'],
+        required: [true, 'Please select category for this product'],
         enum: {
             values: [
-                'Electronics'
+                'Electronics',
+                'Cameras',
+                'Laptops',
+                'Accessories',
+                'Headphones',
+                'Food',
+                "Books",
+                'Clothes/Shoes',
+                'Beauty/Health',
+                'Sports',
+                'Outdoor',
+                'Home'
             ],
             message: 'Please select correct category for product'
         }
     },
     seller: {
         type: String,
-        required: [true, 'seller required']
+        required: [true, 'Please enter product seller']
     },
     stock: {
         type: Number,
-        required: [true, 'Product stock required'],
-        maxLength: [5, 'Max length 5 char'],
+        required: [true, 'Please enter product stock'],
+        maxLength: [5, 'Product name cannot exceed 5 characters'],
         default: 0
     },
     numOfReviews: {
