@@ -45,7 +45,10 @@ exports.getSingleProduct = async (req, res, next) => {
     const product = await Product.findById(req.params.id);
 
     if (!product) {
-        return next(new ErrorHandler('Product not found', 404));
+        return res.status(404).json({
+            success: false,
+            message: 'Product not found'
+        })
     }
 
     res.status(200).json({
@@ -57,3 +60,30 @@ exports.getSingleProduct = async (req, res, next) => {
   }
 
 }
+
+/*Edit product*/
+exports.editProduct = async (req, res, next) => {
+    try {
+    let product = await Product.findById(req.params.id);
+
+    if (!product) {
+        return res.status(404).json({
+            success: false,
+            message: 'Product not found'
+        })
+    }
+        product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+            runValidators: true,
+            useFindAndModify: false
+        });
+    
+        res.status(200).json({
+            success: true,
+            product
+        })
+    } catch(error) {
+        console.log(error);
+      }
+    }
+        
