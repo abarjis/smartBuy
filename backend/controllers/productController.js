@@ -1,13 +1,13 @@
 const Product = require('../models/product')
 const ErrorHandler = require('../helpers/errorHandler');
-
+const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
 
 
 
 /*
   create a new product
  */
-exports.newProduct = async (req, res, next) => {
+exports.newProduct = catchAsyncErrors(async (req, res, next) => {
     try {
     const product = await Product.create(req.body);
      
@@ -19,13 +19,13 @@ exports.newProduct = async (req, res, next) => {
      } catch(error) {
          console.log(error);
        }
-    }
+    })
 
 /*
 Return all products 
 */
 
-exports.getProducts = async (req, res, next) => {
+exports.getProducts = catchAsyncErrors(async (req, res, next) => {
     try {
     const products = await Product.find();
 
@@ -38,13 +38,13 @@ exports.getProducts = async (req, res, next) => {
     console.log(error);
   }
 
-}
+})
 
 /*
 Return a single product!
  */
 
-exports.getSingleProduct = async (req, res, next) => {
+exports.getSingleProduct = catchAsyncErrors(async (req, res, next) => {
     try {
     const product = await Product.findById(req.params.id);
 
@@ -60,12 +60,12 @@ exports.getSingleProduct = async (req, res, next) => {
     console.log(error);
   }
 
-}
+})
 
 /*
 Edit product
 */
-exports.editProduct = async (req, res, next) => {
+exports.editProduct = catchAsyncErrors(async (req, res, next) => {
     try {
     let product = await Product.findById(req.params.id);
 
@@ -85,14 +85,14 @@ exports.editProduct = async (req, res, next) => {
     } catch(error) {
         console.log(error);
       }
-    }
+    })
         
 
 /*
 Delete product
 */
 
-exports.deleteProduct = async (req, res, next) => {
+exports.deleteProduct = catchAsyncErrors(async (req, res, next) => {
     try{
     const product = await Product.findById(req.params.id);
 
@@ -111,4 +111,4 @@ exports.deleteProduct = async (req, res, next) => {
     console.log(error);
   }
 
-}
+})
