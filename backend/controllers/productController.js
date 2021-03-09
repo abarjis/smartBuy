@@ -1,7 +1,7 @@
 const Product = require('../models/product')
 const ErrorHandler = require('../helpers/errorHandler');
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
-
+const Helpers = require('../helpers/helpers')
 
 
 /*
@@ -27,7 +27,11 @@ Return all products
 
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
     try {
-    const products = await Product.find();
+
+
+    const helpers = new Helpers(Product.find(), req.query)
+        .search()
+    const products = await helpers.query;
 
     res.status(200).json({
         success: true,
