@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 Routes
 */ 
 const products = require("./routes/product")
+const auth = require('./routes/auth');
 
 /*
 Middleware error
@@ -22,6 +23,7 @@ app.use(errorMiddleware);
 
 
 app.use('/api/v1', products)
+app.use('/api/v1', auth)
 
 
 module.exports = app
