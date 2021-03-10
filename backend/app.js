@@ -4,11 +4,16 @@ const app = express();
 const bodyParser = require('body-parser')
 const dotenv = require('dotenv');
 const errorMiddleware = require('./middlewares/errors')
+const cookieParser = require('cookie-parser')
+
 
 
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser())
+
+
 
 /*
 Routes
