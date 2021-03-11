@@ -89,13 +89,13 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     // Create reset password url
     const resetUrl = `${req.protocol}://${req.get('host')}/password/reset/${resetToken}`;
 
-    const message = `Your password reset token is as follow:\n\n${resetUrl}\n\nIf you have not requested this email, then ignore it.`
+    const message = `Your password reset link is below:\n\n${resetUrl}\n\nIf you have not requested this a password reset, please ignore it.`
 
     try {
 
         await sendEmail({
             email: user.email,
-            subject: 'SmartBuy Password Recovery',
+            subject: 'SmartBuy Password Reset',
             message
         })
 
