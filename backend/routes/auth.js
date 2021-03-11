@@ -7,6 +7,7 @@ const { registerUser,
     forgotPassword,
     resetPassword,
     userProfile,
+    updateProfile,
     updatePassword } = require('../controllers/authController');
 
 
@@ -18,7 +19,7 @@ router.route('/register').post(registerUser);
 router.route('/login').post(loginUser);
 router.route('/profile').get(isValidUser, userProfile)
 
-
+router.route('/profile/update').put(isValidUser, updateProfile)
 router.route('/password/update').put(isValidUser, updatePassword)
 router.route('/password/forgot').post(forgotPassword)
 router.route('/password/reset/:token').put(resetPassword)
