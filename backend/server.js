@@ -1,5 +1,5 @@
 const app = require('./app')
-const connectDatabase = require('./config/database')
+const connectDatabase = require('./database')
 
 const dotenv = require('dotenv');
 
@@ -18,7 +18,7 @@ process.on('uncaughtException', err => {
 /*
 config file
 */
-dotenv.config({ path: 'backend/config/config.env' })
+dotenv.config({ path: './config.env' })
 
 
 /*
