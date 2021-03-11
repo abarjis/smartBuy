@@ -8,7 +8,8 @@ const { registerUser,
     resetPassword,
     userProfile,
     updateProfile,
-    updatePassword } = require('../controllers/authController');
+    updatePassword,
+    allUsers } = require('../controllers/authController');
 
 
     const { isValidUser, validRoles } = require('../middlewares/userAuth');
@@ -24,6 +25,11 @@ router.route('/password/update').put(isValidUser, updatePassword)
 router.route('/password/forgot').post(forgotPassword)
 router.route('/password/reset/:token').put(resetPassword)
 
+
+/*
+Admin Routes
+*/
+router.route('/admin/users').get(isValidUser, validRoles('admin'), allUsers)
 
 router.route('/logout').get(logoutUser);
 
