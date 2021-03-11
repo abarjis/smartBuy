@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
     Mongoose Duplicate Error
 */ 
     if (err.code === 11000) {
-        const message = `Duplicate ${Object.keys(err.keyValue)} entered`
+        const message = `Duplicated ${Object.keys(err.keyValue)}`
         error = new ErrorHandler(message, 400)
         }
 
@@ -51,14 +51,14 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
      Invalid JWT error
 */
     if (err.name === 'JsonWebTokenError') {
-        const message = 'JSON Web Token is invalid. Try Again!!!'
+        const message = 'JSON Web Token is invalid. Try Again!'
         error = new ErrorHandler(message, 400)
         }
 /*
     Expired JWT error
 */
     if (err.name === 'TokenExpiredError') {
-        const message = 'JSON Web Token is expired. Try Again!!!'
+        const message = 'JSON Web Token is expired. Try Again!'
         error = new ErrorHandler(message, 400)
         }
 

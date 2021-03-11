@@ -145,3 +145,16 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
     generateToken(user, 200, res)
 
 })
+
+
+/*
+ User Profile
+*/
+exports.userProfile = catchAsyncErrors(async (req, res, next) => {
+    const user = await User.findById(req.user.id);
+
+    res.status(200).json({
+        success: true,
+        user
+    })
+})
