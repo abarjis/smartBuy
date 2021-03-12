@@ -33,7 +33,7 @@ const Navbar = () => {
         <span className="ml-1" id="cart_count">2</span>
       </div>
     </nav>
-        </Fragment>
+    </Fragment>
     )
 }
 
