@@ -6,7 +6,8 @@ const {
     singleOrder,
     myOrders,
     allOrders,
-    updateOrder } = require('../controllers/orderController')
+    updateOrder,
+    removeOrder } = require('../controllers/orderController')
 
 const { isValidUser, validRoles } = require('../middlewares/userAuth')
 
@@ -19,6 +20,7 @@ router.route('/orders/myorders').get(isValidUser, myOrders);
 router.route('/admin/orders').get(isValidUser, validRoles('admin'), allOrders);
 router.route('/admin/order/:id')
             .put(isValidUser, validRoles('admin'), updateOrder)
+            .delete(isValidUser, validRoles('admin'), removeOrder)
 
 
 module.exports = router;
