@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 
-export const 
-Navbar = () => {
+const Navbar = () => {
     return (
     <Fragment>
     <nav className="navbar row">
@@ -37,3 +36,6 @@ Navbar = () => {
         </Fragment>
     )
 }
+
+
+export default Navbar
