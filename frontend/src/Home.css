@@ -1,6 +1,7 @@
 /* Home page */
 #products_heading {
     margin-top: 1.8rem;
+    color: #4b0404;
   }
   
   .card {
@@ -22,6 +23,7 @@
   
   .card-text {
     font-size: 1.4rem;
+    color: #4b0404;
   }
   
   #view_btn {
