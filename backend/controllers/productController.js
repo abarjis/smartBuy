@@ -28,15 +28,16 @@ Return all products
 */
 
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
+    
     try {
-
+ 
     const resPerPage = 4;
     const productsCount = await Product.countDocuments();
     const helpers = new Helpers(Product.find(), req.query)
         .search()
         .filter()
         .pagination(resPerPage)
-    
+           
     let products = await helpers.query;
 
     res.status(200).json({
