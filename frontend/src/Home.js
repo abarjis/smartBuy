@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import MetaData from './components/layout/MetaData'
 
 const Home = () => {
     return (
-        <div className="container container-fluid">
+        <Fragment>
+             <MetaData title={'Best Place For Used EV Cars'} />
+
             <h1 id="products_heading">Latest Products</h1>
             <section id="products" className="container mt-5">
       <div className="row">
@@ -31,7 +34,7 @@ const Home = () => {
       </div>
     </section>
             
-        </div>
+        </Fragment>
     )
 }
 
