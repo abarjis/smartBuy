@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 CSS files
 */
 import './components/layout/Navbar.css';
+import './components/layout/Loader.css';
 import './components/layout/Footer.css';
 import './Home.css';
 
