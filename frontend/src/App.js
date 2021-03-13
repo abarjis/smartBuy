@@ -14,6 +14,8 @@ import './Home.css';
 /*
 Components
 */
+import ProductDetails from './components/product/ProductDetails'
+
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Home from './Home'
@@ -27,6 +29,7 @@ function App() {
     <Navbar />
        <div className="container container-fluid">
          <Route path="/" component={Home} exact />
+         <Route path="/product/:id" component={ProductDetails} exact />
         </div>
      <Footer />
       </div>
