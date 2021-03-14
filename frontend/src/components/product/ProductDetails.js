@@ -108,7 +108,6 @@ const ProductDetails = ({ match }) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
 
                     {product.reviews && product.reviews.length > 0 && (
                         <ListReviews reviews={product.reviews} />

@@ -6,7 +6,8 @@ import {
     ALL_PRODUCTS_FAIL,
     PRODUCT_DETAILS_REQUEST,
     PRODUCT_DETAILS_SUCCESS,
-    PRODUCT_DETAILS_FAIL
+    PRODUCT_DETAILS_FAIL,
+    CLEAR_ERRORS
      } from '../constants/productConstants'
 
 
@@ -53,4 +54,11 @@ export const getProductDetails = (id) => async (dispatch) => {
             payload: error.response.data.message
         })
     }
+}
+
+// Clear Errors
+export const clearErrors = () => async (dispatch) => {
+    dispatch({
+        type: CLEAR_ERRORS
+    })
 }

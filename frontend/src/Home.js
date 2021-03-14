@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import MetaData from './components/layout/MetaData'
 import Product from './components/product/Product'
 import Loader from './components/layout/Loader'
@@ -38,6 +38,23 @@ const Home = () => {
         ))}
       </div>
       </section>
+      <div className="d-flex justify-content-center mt-5">
+                            <Pagination
+                                activePage={currentPage}
+                                itemsCountPerPage={resPerPage}
+                                totalItemsCount={productsCount}
+                                onChange={setCurrentPageNo}
+                                nextPageText={'Next'}
+                                prevPageText={'Prev'}
+                                firstPageText={'First'}
+                                lastPageText={'Last'}
+                                itemClass="page-item"
+                                linkClass="page-link"
+                            />
+                        </div>
+
+
+
               </Fragment>
           )}
         </Fragment>
