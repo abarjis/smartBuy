@@ -41,7 +41,7 @@ export const removeItemFromCart = (id) => async (dispatch, getState) => {
 
 
 /*
-Save Shipping info
+Save Shipping infoclea
 */
 export const saveShippingInfo = (data) => async (dispatch) => {
 
