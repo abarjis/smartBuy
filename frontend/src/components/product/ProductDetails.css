@@ -42,7 +42,7 @@
   
 
   /* Reviews */
-
+ 
 .rating {
   margin-top: 10rem;
 }
@@ -64,6 +64,13 @@
 
 .star:first-child {
   padding-left: 0;
+}
+
+.review-btn {
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+  margin-top: 2rem;
+  border-radius: 5rem;
 }
 
 .orange {
