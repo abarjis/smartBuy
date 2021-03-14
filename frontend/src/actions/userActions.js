@@ -237,7 +237,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
 
 /*
 Logout user
-*/ Logout user
+*/
 export const logout = () => async (dispatch) => {
     try {
 
