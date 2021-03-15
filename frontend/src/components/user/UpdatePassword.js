@@ -27,7 +27,7 @@ const UpdatePassword = ({ history }) => {
         if (isUpdated) {
             alert.success('Password updated successfully')
 
-            history.push('/me')
+            history.push('/profile')
 
             dispatch({
                 type: UPDATE_PASSWORD_RESET

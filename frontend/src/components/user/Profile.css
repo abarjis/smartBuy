@@ -15,8 +15,8 @@
 }
 
 .wrapper form .btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #4b0404;
+  border-color: #4b0404;
   color: white;
   margin-top: 2.5rem;
 }
@@ -46,6 +46,6 @@
   }
   
   #edit_profile {
-    background-color: #fa9c23;
-    border-color: #fa9c23;
+    background-color: #ffd500;
+    border-color: #ffd500;
   }

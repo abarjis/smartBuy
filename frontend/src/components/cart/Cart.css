@@ -10,7 +10,7 @@
   }
   
   #delete_cart_item {
-    color: red;
+    color: rgb(224, 18, 18);
     background: white;
     padding: 0.3rem 0.5rem;
     font-size: 1.1rem;
@@ -18,21 +18,21 @@
   }
   
   #card_item_price {
-    color: #febd69;
+    color: #ffd500;
     font-weight: bold;
     font-size: 1.4rem;
   }
   
   #checkout_btn {
-    background-color: #fa9c23;
-    border-color: #fa9c23;
+    background-color: #ffd500;
+    border-color: #ffd500;
     margin-top: 2rem;
     border-radius: 5rem;
   }
   
   #view_order_details {
-    background-color: #fa9c23;
-    border-color: #fa9c23;
+    background-color: #ffd500;
+    border-color: #ffd500;
   }
   
   #order_summary {

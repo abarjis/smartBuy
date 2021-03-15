@@ -9,9 +9,25 @@ nav {
     color: #4b0404;
   }
 
-  .navbar-brand {
-      color: #ffd500;
+  .navbar-brand a:hover, a:visited, a:link, a:active {
+    text-decoration: none!important;
+
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
   }
+  #header {
+    color: #ffd500;
+  }
+
+  #usename {
+    color: #ffd500;
+  }
+  
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
   
   .input-group {
     width: 90%;

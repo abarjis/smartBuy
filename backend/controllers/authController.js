@@ -11,12 +11,6 @@ const cloudinary = require('cloudinary');
 Sign up user */
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 
-    const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
-        folder: 'avatar',
-        width: 150,
-        crop: "scale"
-    })
-
 
     const { name, email, password } = req.body;
 
@@ -24,10 +18,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
         name,
         email,
         password,
-        avatar: {
-            public_id: result.public_id,
-            url: result.secure_url
-        }
+
     })
 
     
@@ -98,7 +89,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     // Create reset password url
     const resetUrl = `${req.protocol}://${req.get('host')}/password/reset/${resetToken}`;
 
-    const message = `Your password reset link is below:\n\n${resetUrl}\n\nIf you have not requested this a password reset, please ignore it.`
+    const message = `Your password reset link is below:\n\n${resetUrl}\n\nIf you have not requested this password reset, please ignore it.`
 
     try {
 
@@ -177,6 +168,7 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
         name: req.body.name,
         email: req.body.email
     }
+
 
     const user = await User.findByIdAndUpdate(req.user.id, newUserData, {
         new: true,
@@ -266,6 +258,7 @@ exports.removeUser = catchAsyncErrors(async (req, res, next) => {
     if (!user) {
         return next(new ErrorHandler(`User does not found with id: ${req.params.id}`))
     }
+
 
     await user.remove();
 
