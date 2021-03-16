@@ -9,7 +9,9 @@
     "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server",
     "seeder": "node backend/helpers/seeder.js",
     "test": "jest",
-    "test:watch": "jest --watchAll --detectOpenHandles"
+    "test:watch": "jest --watchAll --detectOpenHandles",
+    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
+    
   },
   "jest": {
     "testEnvironment": "node"

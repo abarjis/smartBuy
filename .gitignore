@@ -2,3 +2,5 @@
 node_modules/
 /backend/config.env
 /backend/data/
+/frontend/build
+/frontend/node_modules/
