@@ -26,7 +26,6 @@ In order to use this APP, you need terminal (mac: pre-installed) or gitbash (pc:
 5. npm i
 6. cd ..
 7. npm run dev
-# project started
 
 ## Technologies
 Frontend: React.js, Redux, CSS, Bootstrap. 
