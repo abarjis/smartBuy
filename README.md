@@ -28,6 +28,6 @@ In order to use this APP, you need terminal (mac: pre-installed) or gitbash (pc:
 7. npm run dev
 
 ## Technologies
-Frontend: React.js, Redux, CSS, Bootstrap. 
-Backend: Node.js, MongoDB, Mongoose, Express.js.
-Other tools: Stripe API, Mailtrap, Cloudinary.
+- Frontend: React.js, Redux, CSS, Bootstrap. 
+- Backend: Node.js, MongoDB, Mongoose, Express.js.
+- Other tools: Stripe API, Mailtrap, Cloudinary.
