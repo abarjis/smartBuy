@@ -1,4 +1,4 @@
-# smart Buy
+# Amart Buy
 An Ecommerce Market Place for used EV Cars built with MERN stack, and utilizes third party API's.
 
 
