@@ -22,18 +22,17 @@ const Home = ({ match }) => {
     const [rating, setRating] = useState(0)
 
     const categories = [
-        'Electronics',
-        'Cameras',
-        'Laptops',
-        'Accessories',
-        'Headphones',
-        'Food',
-        "Books",
-        'Clothes/Shoes',
-        'Beauty/Health',
-        'Sports',
-        'Outdoor',
-        'Home'
+        'Toyota',
+        'Tesla',
+        'BMW',
+        'Audi',
+        'Ford',
+        'Lucid',
+        "NIO",
+        'Porsche',
+        'Hyundai',
+        'Nissan',
+        'Others'
     ]
 
     const alert = useAlert();

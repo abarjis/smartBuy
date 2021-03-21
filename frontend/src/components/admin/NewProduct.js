@@ -20,18 +20,17 @@ const NewProduct = ({ history }) => {
     const [imagesPreview, setImagesPreview] = useState([])
 
     const categories = [
-        'Electronics',
-        'Cameras',
-        'Laptops',
-        'Accessories',
-        'Headphones',
-        'Food',
-        "Books",
-        'Clothes/Shoes',
-        'Beauty/Health',
-        'Sports',
-        'Outdoor',
-        'Home'
+        'Toyota',
+        'Tesla',
+        'BMW',
+        'Audi',
+        'Ford',
+        'Lucid',
+        "NIO",
+        'Porsche',
+        'Hyundai',
+        'Nissan',
+        'Others'
     ]
 
     const alert = useAlert();
@@ -61,7 +60,7 @@ const NewProduct = ({ history }) => {
         formData.set('name', name);
         formData.set('price', price);
         formData.set('description', description);
-        formData.set('category', category);
+        formData.set('', category);
         formData.set('stock', stock);
         formData.set('seller', seller);
 
