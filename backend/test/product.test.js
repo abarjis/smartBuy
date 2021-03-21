@@ -44,7 +44,7 @@ describe(" /products", () => {
             numOfReviews : 32,
             reviews: [] });
   
-      // make sure we add it correctly
+      /*make sure we add it correctly */ 
 
       expect(newProduct.statusCode).toBe(201);
   
