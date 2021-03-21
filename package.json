@@ -10,7 +10,7 @@
     "seeder": "node backend/helpers/seeder.js",
     "test": "jest",
     "test:watch": "jest --watchAll --detectOpenHandles",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm insall --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "engines": {
     "node": "14.15.1",
