@@ -19,7 +19,7 @@ import './components/product/productDetailsStyle.css'
 import Cart from './components/cart/Cart'
 import Shipping from './components/cart/Shipping'
 import ConfirmOrder from './components/cart/ConfirmOrder'
-import Payment from './components/cart/Payment.js'
+import Payment from './components/cart/Payment'
 import OrderSuccess from './components/cart/OrderSuccess'
 
 //Cart CSS
